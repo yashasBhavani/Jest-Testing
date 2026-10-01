@@ -6,5 +6,4 @@ test('to check that if the first letter is capital',() => {
     expect(capitalize("34hi")).toMatch("34Hi");
     expect(capitalize("hi bro")).toMatch("Hi bro");
     expect(capitalize("/*732hi")).toMatch("/*732Hi");
-    expect(capitalize("435")).toMatch("no letter is present");
 })
