@@ -40,19 +40,20 @@ function caesarCipher(string, number) {
     let left = 0,
       right = aplhabets.length - 1;
     userString = string[i];
-    while (right > left) {
-      if (string[i] === aplhabets[right]) {
+    while (right >= left) {
+      if (string[i].toLowerCase() === aplhabets[right]) {
         index = right;
       }
-      if (string[i] === aplhabets[left]) {
+      if (string[i].toLowerCase() === aplhabets[left]) {
         index = left;
       }
-      if (string[i] !== left && string[i] !== right) {
+      if (string[i].toLowerCase() !== left && string[i] !== right) {
         left++;
         right--;
       }
     }
     let encryptedIndex = (number + index) % 26;
+    console.log(encryptedIndex);
     if (isUpperCase.test(string[i]))
       encryption += aplhabets[encryptedIndex].toUpperCase();
     else if (isLowerCase.test(string[i]))
